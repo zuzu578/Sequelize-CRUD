@@ -35,4 +35,5 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 db.User = require('./user')(sequelize, Sequelize);
 db.Todo = require("./todo")(sequelize, Sequelize);
+db.Music = require("./music")(sequelize, Sequelize);
 module.exports = db;

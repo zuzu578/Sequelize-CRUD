@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const todo = require('./src/routes/todo');
 const auth = require("./src/routes/auth");
+const crawlling = require("./src/routes/crawlling");
 var bodyParser = require('body-parser');
 const { sequelize } = require('../models');
 //const { sequelize } = require('../models/User');
@@ -25,6 +26,7 @@ app.use(bodyParser.json());
 
 app.use('/todo', todo);
 app.use("/auth",auth);
+app.use("/crawlling",crawlling)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
